@@ -1,10 +1,10 @@
 <div>
-<label> Image search </label>
-<input (keyup)="doSearch($any($event.target).value)" />
+  <label> Image search </label>
+  <input (keyup)="doSearch($any($event.target).value)" />
 
-<hr />
+  <hr />
 
-<span *ngFor="let photo of photos">
-  <img [src]="photo.thumbnailUrl" />
-</span>
+  <span *ngFor="let photo of photos">
+    <img [src]="photo.thumbnailUrl" />
+  </span>
 </div>
