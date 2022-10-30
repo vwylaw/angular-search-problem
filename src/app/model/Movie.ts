@@ -1,7 +1,4 @@
-export interface Movie {
+export class Movie {
   Poster: string;
   Title: number;
-  Type: string;
-  Year: string;
-  imdbID: string;
 }

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Movie } from './model/Movie';
 import { MovieSearchResponse } from './model/MovieSearchResponse';
 import { MovieService } from './service/movie.service';
 
