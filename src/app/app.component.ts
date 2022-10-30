@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Photo } from './model/Photo';
-import { PhotoService } from './service/photo.service';
+import { Movie } from './model/Movie';
+import { MovieSearchResponse } from './model/MovieSearchResponse';
+import { MovieService } from './service/movie.service';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +9,13 @@ import { PhotoService } from './service/photo.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  photos: Photo[] = [];
+  results: MovieSearchResponse;
 
-  constructor(private photoService: PhotoService) {}
+  constructor(private movieService: MovieService) {}
 
   doSearch(input: string): void {
-    this.photoService
+    this.movieService
       .search(input)
-      .subscribe((results: Photo[]) => (this.photos = results));
+      .subscribe((results: MovieSearchResponse) => (this.results = results));
   }
 }
